@@ -14,7 +14,7 @@ async function insertToDB(data) {
     },
   });
   console.log(notesDB);
-  revalidatePath("/");
+  revalidatePath("keep-clone-next.onrender.com");
   prismaDisconnect();
 }
 
