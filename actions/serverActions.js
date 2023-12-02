@@ -14,8 +14,8 @@ async function insertToDB(data) {
     },
   });
   console.log(notesDB);
-  // revalidatePath("keep-clone-next.onrender.com");
-  revalidatePath("/");
+  revalidatePath("keep-clone-next.onrender.com");
+  // revalidatePath("/");
   prismaDisconnect();
 }
 
@@ -39,8 +39,8 @@ const deleteFromDB = async (id) => {
     },
   });
   console.log(del);
-  revalidatePath("/");
-  // revalidatePath("keep-clone-next.onrender.com");
+  // revalidatePath("/");
+  revalidatePath("keep-clone-next.onrender.com");
 };
 
 export { insertToDB, findFromDB, prismaDisconnect, deleteFromDB };
