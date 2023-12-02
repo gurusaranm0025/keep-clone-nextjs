@@ -6,7 +6,7 @@ import { insertToDB } from "@/actions/serverActions";
 
 function NotesInpForm() {
   const [notes, setNotes] = useState({ title: "", notes: "" });
-  const [empyMsg, setEmptyMSg] = useState({ title: false, notes: false });
+  const [emptyMsg, setEmptyMSg] = useState({ title: false, notes: false });
 
   function checkEmpty() {
     if (notes.title.trim().length === 0 && notes.notes.trim().length === 0) {
@@ -33,7 +33,6 @@ function NotesInpForm() {
       return { ...prevValue, title: e.target.value };
     });
     checkEmpty();
-    console.log(notes);
   }
 
   function notesChangeHandler(e) {
@@ -41,16 +40,13 @@ function NotesInpForm() {
       return { ...prevValue, notes: e.target.value };
     });
     checkEmpty();
-    console.log(notes);
   }
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    if (empyMsg.title || empyMsg.notes) return;
+    if (emptyMsg.title || emptyMsg.notes) return;
     await insertToDB(notes);
-    console.log(
-      "trying to submit whatever you have written in your invalid life"
-    );
+    console.log("trying to submit whatever you have written!!@@");
   };
 
   return (
@@ -72,7 +68,7 @@ function NotesInpForm() {
           <span>+</span>
         </button>
       </form>
-      {(empyMsg.title || empyMsg.notes) && (
+      {(emptyMsg.title || emptyMsg.notes) && (
         <p
           style={{ color: "red", fontSize: ".8rem", padding: "0", margin: "0" }}
         >

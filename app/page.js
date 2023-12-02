@@ -12,7 +12,6 @@ export default async function Home() {
       prismaDisconnect();
     });
   console.log("pages");
-  console.log(notes);
   return (
     <>
       <NavBar />

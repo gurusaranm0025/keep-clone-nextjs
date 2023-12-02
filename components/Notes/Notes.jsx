@@ -5,7 +5,6 @@ import { deleteFromDB } from "@/actions/serverActions";
 
 function Notes({ id, title, notes }) {
   function deleteHandler(id) {
-    console.log(id);
     deleteFromDB(id);
   }
   return (

@@ -1,5 +1,3 @@
-"use client";
-
 import classes from "./NotesList.module.css";
 import Notes from "../Notes/Notes";
 
@@ -7,6 +5,14 @@ function NotesList({ notes }) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.notesWrapper}>
+        <Notes
+          id="sudo"
+          key={"sudo"}
+          title={"Welcome"}
+          notes={
+            "This is a simple Google Keep Web Clone I've done to learn Next.JS and PostgreSQL."
+          }
+        />
         {notes &&
           notes.map((note) => {
             return (
@@ -18,14 +24,6 @@ function NotesList({ notes }) {
               />
             );
           })}
-        <Notes
-          id="sudo"
-          key={"sudo"}
-          title={"Welcome"}
-          notes={
-            "This is a simple Google Keep Web Clone I've done to learn Next.JS and PostgreSQL."
-          }
-        />
       </div>
     </div>
   );
