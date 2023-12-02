@@ -14,8 +14,7 @@
 
 .notesForm {
     border: 1.3px gray solid;
-    min-width: 300px;
-    width: calc(25vw - 33px);
+    width: calc(27vw - 33px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,4 +58,34 @@
 
 .submitButton:hover {
     background-color: rgba(236, 244, 214, .7);
+}
+
+@media screen and (max-width:2000px) {
+    .notesForm {
+        width: calc(32vw - 33px);
+    }
+}
+
+@media screen and (max-width:1700px) {
+    .notesForm {
+        width: calc(37vw - 33px);
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .notesForm {
+        width: calc(50vw - 33px);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .notesForm {
+        width: calc(70vw - 33px);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .notesForm {
+        width: calc(80vw - 33px);
+    }
 }

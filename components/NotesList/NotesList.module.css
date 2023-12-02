@@ -13,40 +13,29 @@
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(5, 300px);
-    grid-template-rows: fit-content(auto);
-    gap: 50px;
+    gap: 17px;
 }
 
 @media screen and (max-width: 1720px) {
     .notesWrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 300px);
+        grid-template-columns: repeat(4, 22vw);
     }
 }
 
 @media screen and (max-width: 1400px) {
     .notesWrapper {
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: repeat(3, 30vw);
     }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1000px) {
     .notesWrapper {
-        grid-template-columns: repeat(2, 280px);
-        gap: 30px;
+        grid-template-columns: repeat(3, 30vw);
     }
 }
 
-@media screen and (max-width: 810px) {
-    .notesWrapper {
-        grid-template-columns: repeat(3, 225px);
-        gap: 23px;
-    }
-}
-
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 750px) {
     .notesWrapper {
         grid-template-columns: repeat(2, 45vw);
-        gap: 10px;
     }
 }

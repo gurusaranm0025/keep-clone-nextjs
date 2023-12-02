@@ -12,6 +12,12 @@
     flex-direction: column;
     justify-content: flex-start;
     overflow-wrap: break-word;
+    transition: all .2s ease-in;
+}
+
+.notesWrapper:hover {
+    box-shadow: 10px 7px 0px 0px rgba(236, 244, 214, .2);
+    border: .5px var(--text) solid;
 }
 
 .title {
