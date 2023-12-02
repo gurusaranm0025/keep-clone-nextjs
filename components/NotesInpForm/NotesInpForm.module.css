@@ -1,0 +1,62 @@
+.div {
+    --background: #040D12;
+    --primary: #87C4FF;
+    --text: #ECF4D6;
+}
+
+.wrapper {
+    margin-top: 9vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.notesForm {
+    border: 1.3px gray solid;
+    min-width: 300px;
+    width: calc(25vw - 33px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    border-radius: calc(100px - 76px);
+    margin: 0;
+}
+
+.notesHeading {
+    background: transparent;
+    color: #ECF4D6;
+    outline: none;
+    border: none;
+    border-bottom: .5px gray solid;
+    font-size: 1.3rem;
+}
+
+.notes {
+    margin-top: 3px;
+    background-color: transparent;
+    color: #ECF4D6;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+.submitButton {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 24px;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    font-size: 1.5rem;
+    background-color: #ECF4D6;
+    color: var(--background);
+    transition: all .35s ease-in;
+}
+
+.submitButton:hover {
+    background-color: rgba(236, 244, 214, .7);
+}
