@@ -24,6 +24,14 @@
     margin: 0;
 }
 
+.notes:focus .notesForm {
+    box-shadow: 10px 7px 0px 0px #ECF4D6;
+}
+
+.notesHeading:focus .notesForm {
+    box-shadow: 10px 7px 0px 0px #ECF4D6;
+}
+
 .notesHeading {
     background: transparent;
     color: #ECF4D6;
@@ -31,6 +39,12 @@
     border: none;
     border-bottom: .5px gray solid;
     font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.notes::placeholder,
+.notesHeading::placeholder {
+    font-family: 'Courier Prime', sans-serif;
 }
 
 .notes {
@@ -40,6 +54,7 @@
     outline: none;
     border: none;
     font-size: 1rem;
+    font-family: "Poppins", sans-serif;
     resize: none;
 }
 
@@ -55,6 +70,7 @@
     background-color: #ECF4D6;
     color: var(--background);
     transition: all .35s ease-in;
+    font-family: "Poppins", sans-serif;
 }
 
 .submitButton:hover {

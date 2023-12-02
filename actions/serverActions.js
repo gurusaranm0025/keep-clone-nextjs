@@ -6,7 +6,7 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
-const insertToDB = async (data) => {
+async function insertToDB(data) {
   const notesDB = await prisma.notes.create({
     data: {
       title: data.title,
@@ -15,12 +15,19 @@ const insertToDB = async (data) => {
   });
   console.log(notesDB);
   revalidatePath("/");
-};
+  prismaDisconnect();
+}
 
 const findFromDB = async () => {
   const notesFromDB = await prisma.notes.findMany();
   console.log("server actions");
+  prismaDisconnect();
   return notesFromDB;
 };
 
-export { insertToDB, findFromDB };
+const prismaDisconnect = async () => {
+  console.log("disconnected from prisma");
+  await prisma.$disconnect();
+};
+
+export { insertToDB, findFromDB, prismaDisconnect };
