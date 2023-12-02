@@ -34,7 +34,7 @@
 .delButton {
     width: 30px;
     height: 30px;
-    margin-left: auto;
+    margin: auto 0 0 auto;
     background: #D71313;
     padding: 0;
     outline: none;
