@@ -30,3 +30,17 @@
     width: auto;
     font-family: "Poppins", sans-serif;
 }
+
+.delButton {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    background: #D71313;
+    padding: 0;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

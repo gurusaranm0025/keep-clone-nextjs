@@ -14,13 +14,15 @@ async function insertToDB(data) {
     },
   });
   console.log(notesDB);
-  revalidatePath("keep-clone-next.onrender.com");
+  // revalidatePath("keep-clone-next.onrender.com");
+  revalidatePath("/");
   prismaDisconnect();
 }
 
 const findFromDB = async () => {
   const notesFromDB = await prisma.notes.findMany();
   console.log("server actions");
+  console.log(notesFromDB);
   prismaDisconnect();
   return notesFromDB;
 };
@@ -30,4 +32,15 @@ const prismaDisconnect = async () => {
   await prisma.$disconnect();
 };
 
-export { insertToDB, findFromDB, prismaDisconnect };
+const deleteFromDB = async (id) => {
+  const del = await prisma.notes.delete({
+    where: {
+      id: id,
+    },
+  });
+  console.log(del);
+  revalidatePath("/");
+  // revalidatePath("keep-clone-next.onrender.com");
+};
+
+export { insertToDB, findFromDB, prismaDisconnect, deleteFromDB };
