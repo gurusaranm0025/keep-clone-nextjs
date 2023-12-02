@@ -1,0 +1,24 @@
+.div {
+    --background: #040D12;
+    --primary: #87C4FF;
+    --text: #ECF4D6;
+}
+
+.notesWrapper {
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #232D3F;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.notes {
+    width: auto;
+}

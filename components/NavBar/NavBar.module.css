@@ -1,10 +1,11 @@
-:root {
+.div {
     --background: #040D12;
     --primary: #87C4FF;
+    --text: #ECF4D6;
 }
 
 .logo {
-    color: #87C4FF;
+    color: var(--text);
     font-size: 1.5rem;
 }
 
