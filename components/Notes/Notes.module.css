@@ -16,7 +16,7 @@
 }
 
 .notesWrapper:hover {
-    box-shadow: 10px 7px 0px 0px rgba(236, 244, 214, .2);
+    box-shadow: 10px 7px 0px 0px rgb(236, 244, 214);
     border: .5px var(--text) solid;
 }
 

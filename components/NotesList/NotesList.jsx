@@ -1,20 +1,21 @@
 import classes from "./NotesList.module.css";
 import Notes from "../Notes/Notes";
 
-function NotesList() {
+function NotesList({ notes }) {
   return (
     <div className={classes.wrapper}>
       <div className={classes.notesWrapper}>
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
-        <Notes />
+        {notes &&
+          notes.map((note) => {
+            return (
+              <Notes
+                id={notes.id}
+                key={note.id}
+                title={note.title}
+                notes={note.notes}
+              />
+            );
+          })}
       </div>
     </div>
   );

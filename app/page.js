@@ -2,12 +2,15 @@ import NavBar from "@/components/NavBar/NavBar";
 import NotesInpForm from "@/components/NotesInpForm/NotesInpForm";
 import NotesList from "@/components/NotesList/NotesList";
 
-export default function Home() {
+import { findFromDB } from "@/actions/serverActions";
+
+export default async function Home() {
+  const notes = await findFromDB();
   return (
     <>
       <NavBar />
       <NotesInpForm />
-      <NotesList />
+      <NotesList notes={notes} />
     </>
   );
 }
