@@ -1,0 +1,15 @@
+:root {
+    --background: #040D12;
+    --primary: #87C4FF;
+}
+
+.logo {
+    color: #87C4FF;
+    font-size: 1.3rem;
+}
+
+.nav {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
