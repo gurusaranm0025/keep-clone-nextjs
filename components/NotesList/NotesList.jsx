@@ -10,7 +10,7 @@ function NotesList({ notes }) {
           key={"sudo"}
           title={"Welcome"}
           notes={
-            "This is a simple Google Keep Web Clone I've done to learn Next.JS and PostgreSQL."
+            "This is a simple Google Keep Web Clone I've done to learn Next.JS and PostgreSQL and some responsive frontend design."
           }
         />
         {notes &&
