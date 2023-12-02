@@ -15,5 +15,5 @@ body {
     background: rgb(34, 9, 44);
     background: radial-gradient(farthest-corner at top right, rgba(34, 9, 44, 1) 0%, rgba(4, 13, 18, 1) 25%, rgba(4, 13, 18, 1) 100%);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
