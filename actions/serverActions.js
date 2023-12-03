@@ -13,7 +13,6 @@ async function insertToDB(data) {
       notes: data.notes,
     },
   });
-  // revalidatePath("keep-clone-next.onrender.com");
   revalidatePath("/");
   prismaDisconnect();
 }
@@ -38,12 +37,10 @@ const deleteFromDB = async (id) => {
   });
   console.log("Deleted");
   revalidatePath("/");
-  // revalidatePath("keep-clone-next.onrender.com");
 };
 
 const custRevalidatePath = () => {
   revalidatePath("/");
-  // revalidatePath("keep-clone-next.onrender.com")
 };
 
 export {

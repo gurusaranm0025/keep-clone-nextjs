@@ -46,6 +46,7 @@ function NotesInpForm() {
     e.preventDefault();
     if (emptyMsg.title || emptyMsg.notes) return;
     await insertToDB(notes);
+    setNotes({ title: "", notes: "" });
     console.log("trying to submit whatever you have written!!@@");
   };
 
@@ -57,12 +58,14 @@ function NotesInpForm() {
           type="text"
           className={classes.notesHeading}
           onChange={titleChangeHandler}
+          value={notes.title}
         />
         <textarea
           className={classes.notes}
           rows="6"
           placeholder="notes here..."
           onChange={notesChangeHandler}
+          value={notes.notes}
         ></textarea>
         <button onClick={submitHandler} className={classes.submitButton}>
           <span>+</span>
